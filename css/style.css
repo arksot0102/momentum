@@ -1,11 +1,17 @@
 @import "reset.css";
 @import "keyframes.css";
-
+@import "site.css";
 body {
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+}
+.main {
+  padding: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .hidden {
   display: none !important;
@@ -15,10 +21,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed;
+
   bottom: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  justify-content: center;
 }
 #login-form input {
   color: aliceblue;
@@ -45,15 +50,11 @@ body {
   font-size: 20px;
 }
 .clock-div {
-  bottom: 50%;
-  left: 50%;
-  position: fixed;
   width: 400px;
   height: 120px;
   z-index: 1;
   text-align: center;
   vertical-align: middle;
-  transform: translate(-50%, -50%);
 }
 #clock {
   display: inline-block;
@@ -67,7 +68,7 @@ body {
   z-index: 1;
 }
 .text-shadow {
-  text-shadow: 1px 1px 5px black;
+  text-shadow: 1px 1px 3px black;
 }
 .bgImage {
   z-index: -1;
@@ -83,6 +84,40 @@ body {
   font-weight: 900;
   filter: blur(5px);
 }
-.go-away {
-  animation: scale-down-center 0.3s ease-in-out;
+
+.clock-to-top-right__finished {
+  transform: translateY(-40vh);
+}
+#greeting,
+#quote,
+#logout-btn {
+  color: aliceblue;
+}
+#greeting {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+#quote {
+  position: fixed;
+  width: 100vw;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.quote__column {
+  display: inline-block;
+}
+.quote__column:first-child {
+  font-size: 16px;
+}
+.quote__column:last-child {
+  margin-top: 4px;
+  font-size: 12px;
+}
+.logout-div {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
 }

@@ -1,0 +1,41 @@
+.site__column__title,
+.site__column__contents__site img {
+  width: 100px;
+  height: 100px;
+  border-radius: 40%;
+  margin-right: 40px;
+  margin-bottom: 10px;
+}
+.site {
+  top: 30vh;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.site__column {
+  display: flex;
+}
+.site__column__title {
+  margin-right: 100px;
+}
+.site__column__contents {
+  display: flex;
+}
+.site__column__contents__site {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.site__column__contents__site span {
+  width: 100px;
+  height: 20px;
+  margin-top: 2px;
+  color: aliceblue;
+}
+.site__column__contents__site img {
+  box-shadow: 2px 2px 4px black;
+}
