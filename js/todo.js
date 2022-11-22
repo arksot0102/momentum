@@ -33,7 +33,6 @@ function handleToDoSubmit(event) {
   //뒤에서 form안에 넣은 값을 없애기 전에 새로운 todo로 copy해놓는 작업임
   toDoInput.value = "";
   paintToDo(newTodo);
-  toDoList.li.classList.add("slide-in-right");
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
