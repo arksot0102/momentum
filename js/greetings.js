@@ -3,6 +3,8 @@ const loginInput = loginForm.querySelector("input");
 const loginButton = loginForm.querySelector("button");
 const logoutButton = document.querySelector("#logout-btn");
 const greeting = document.querySelector("#greeting");
+const site = document.querySelector(".site");
+const toDo = document.querySelector("#todo-form");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "userName";
 
@@ -13,6 +15,9 @@ function onLoginSubmit(event) {
   greeting.classList.add("slide-in-left");
   logoutButton.classList.add("slide-in-bottom");
   logoutButton.classList.remove(HIDDEN_CLASSNAME);
+  site.classList.remove(HIDDEN_CLASSNAME);
+  toDo.classList.remove(HIDDEN_CLASSNAME);
+  toDo.classList.add("slide-in-bottom");
 }
 
 function paintGreetings() {
@@ -31,6 +36,8 @@ if (savedUserName === null) {
   loginForm.classList.add(HIDDEN_CLASSNAME);
   clock.classList.add("clock-to-top-right__finished");
   logoutButton.classList.remove(HIDDEN_CLASSNAME);
+  site.classList.remove(HIDDEN_CLASSNAME);
+  toDo.classList.remove(HIDDEN_CLASSNAME);
 }
 function logout() {
   localStorage.clear();

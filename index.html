@@ -28,66 +28,79 @@
         <span class="quote__column text-shadow"></span>
       </div>
     </div>
-    <h1 id="greeting" class="hidden text-shadow"></h1>
-    <div class="logout-div">
-      <form><button id="logout-btn" class="hidden">Log Out</button></form>
+    <div class="todo-div">
+      <form id="todo-form" class="hidden">
+        <input
+          type="text"
+          placeholder="Write a To Do and Press Enter"
+          required
+          maxlength="21"
+          class="text-shadow"
+        />
+      </form>
+      <ul id="todo-list" class="text-shasdow"></ul>
     </div>
-    <div class="site">
-      <div class="site__column">
-        <div class="site__column__title"></div>
-        <div class="site__column__contents">
-          <div class="site__column__contents__site">
-            <img src="images/naver.png" />
-            <span class="text-shadow">Naver</span>
-          </div>
-          <div class="site__column__contents__site">
-            <img src="images/youtube.png" />
-            <span class="text-shadow">Youtube</span>
-          </div>
-          <div class="site__column__contents__site">
-            <img src="images/twitch.jpg" />
-            <span class="text-shadow">Twitch</span>
-          </div>
-        </div>
+    <h1 id="greeting" class="hidden"></h1>
+    <div class="logout-div">
+      <form>
+        <button id="logout-btn" class="hidden text-shadow">Log Out</button>
+      </form>
+    </div>
+    <div class="site hidden">
+      <div
+        OnClick="location.href ='http://naver.com'"
+        class="site__column__contents__site"
+      >
+        <img href="https://www.naver.com/" src="images/naver.png" />
+        <span class="text-shadow">Naver</span>
       </div>
-      <div class="site__column">
-        <div class="site__column__title"></div>
-        <div class="site__column__contents">
-          <div class="site__column__contents__site">
-            <img src="images/quasarzone.jpg" />
-            <span class="text-shadow">Quasarzone</span>
-          </div>
-          <div class="site__column__contents__site">
-            <img src="" />
-            <span class="text-shadow"></span>
-          </div>
-          <div class="site__column__contents__site">
-            <img src="" />
-            <span class="text-shadow"></span>
-          </div>
-        </div>
+      <div
+        OnClick="location.href ='http://youtube.com'"
+        class="site__column__contents__site"
+      >
+        <img src="images/youtube.png" />
+        <span class="text-shadow">Youtube</span>
       </div>
-      <div class="site__column">
-        <div class="site__column__title"></div>
-        <div class="site__column__contents">
-          <div class="site__column__contents__site">
-            <img src="images/futbin.png" />
-            <span class="text-shadow">Futbin</span>
-          </div>
-          <div class="site__column__contents__site">
-            <img src="images/fifa23.jpg" />
-            <span class="text-shadow">FIFA 23</span>
-          </div>
-          <div class="site__column__contents__site">
-            <img src="" />
-            <span class="text-shadow"></span>
-          </div>
-        </div>
+      <div
+        OnClick="location.href ='http://twitch.com'"
+        class="site__column__contents__site"
+      >
+        <img src="images/twitch.jpg" />
+        <span class="text-shadow">Twitch</span>
+      </div>
+      <div
+        OnClick="location.href ='http://netflix.com'"
+        class="site__column__contents__site"
+      >
+        <img src="images/netflix.jpg" />
+        <span class="text-shadow">Netflix</span>
+      </div>
+      <div
+        OnClick="location.href ='https://quasarzone.com/bbs/qb_saleinfo'"
+        class="site__column__contents__site"
+      >
+        <img src="images/quasarzone.jpg" />
+        <span class="text-shadow">Quasarzone</span>
+      </div>
+      <div
+        OnClick="location.href ='http://futbin.com'"
+        class="site__column__contents__site"
+      >
+        <img src="images/futbin.png" />
+        <span class="text-shadow">Futbin</span>
+      </div>
+      <div
+        OnClick="location.href ='https://www.ea.com/fifa/ultimate-team/web-app/'"
+        class="site__column__contents__site"
+      >
+        <img src="images/fifa23.jpg" />
+        <span class="text-shadow">FIFA 23</span>
       </div>
     </div>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
   </body>
 </html>
