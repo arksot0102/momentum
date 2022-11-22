@@ -68,6 +68,7 @@ body {
   color: aliceblue;
   z-index: 1;
 }
+
 .text-shadow {
   text-shadow: 1px 1px 3px black;
 }
@@ -87,7 +88,7 @@ body {
 }
 
 .clock-to-top-right__finished {
-  transform: translateY(-40vh);
+  transform: translateY(-40vh) translateX(40vw) scale(0.5);
 }
 #greeting,
 #quote,
