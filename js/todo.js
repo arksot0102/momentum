@@ -12,6 +12,8 @@ function saveToDos() {
 function deleteToDo(event) {
   const li = event.target.parentElement;
   li.remove();
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+  saveToDos();
 }
 function checkToDo(event) {
   const li = event.target.parentElement;
@@ -21,8 +23,11 @@ function checkToDo(event) {
 }
 function paintToDo(newTodo) {
   const list = document.createElement("li");
+  list.id = newTodo.id;
+  //newTodo.id는 입력값이 newTodoObj로 받아오는거임
+  //저 밑에 handleToDoSubmit에 의해
   const span = document.createElement("span");
-  span.innerText = newTodo;
+  span.innerText = newTodo.text;
   const check = document.createElement("button");
   check.innerText = "✓";
   const button = document.createElement("button");
@@ -40,8 +45,12 @@ function handleToDoSubmit(event) {
   const newTodo = toDoInput.value;
   //뒤에서 form안에 넣은 값을 없애기 전에 새로운 todo로 copy해놓는 작업임
   toDoInput.value = "";
-  toDos.push(newTodo);
-  paintToDo(newTodo);
+  const newTodoObj = {
+    text: newTodo,
+    id: Date.now(),
+  };
+  toDos.push(newTodoObj);
+  paintToDo(newTodoObj);
   saveToDos();
 }
 
@@ -55,4 +64,4 @@ if (savedToDos !== null) {
   toDos = parsedToDos;
 }
 
-console.log(JSON.parse(savedToDos));
+function sexyFilter() {}
