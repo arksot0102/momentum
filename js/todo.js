@@ -42,10 +42,7 @@ function handleToDoSubmit(event) {
   toDoInput.value = "";
   toDos.push(newTodo);
   paintToDo(newTodo);
-<<<<<<< Updated upstream
-=======
   saveToDos();
->>>>>>> Stashed changes
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
