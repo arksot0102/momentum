@@ -15,11 +15,33 @@ function deleteToDo(event) {
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
   saveToDos();
 }
+
 function checkToDo(event) {
   const li = event.target.parentElement;
   const button = li.querySelector(":nth-child(2)");
-  console.log(button);
   button.classList.toggle("checked");
+  function hello(line) {
+    if (line.id == li.id) {
+      line.checked = true;
+    }
+  }
+  toDos.forEach(hello);
+  /*function validateClass(line) {
+    if (
+      li.id == line.id &&
+      !button.classList.contains("checked") &&
+      (line.checked = true)
+    ) {
+      button.classList.add("checked");
+    }
+    console.log(button);
+    console.log(li.id == line.id);
+    console.log(!button.classList.contains("checked"));
+    console.log((line.checked = true));
+  }
+  toDos.forEach(validateClass);
+*/
+  saveToDos();
 }
 function paintToDo(newTodo) {
   const list = document.createElement("li");
@@ -48,6 +70,7 @@ function handleToDoSubmit(event) {
   const newTodoObj = {
     text: newTodo,
     id: Date.now(),
+    checked: false,
   };
   toDos.push(newTodoObj);
   paintToDo(newTodoObj);
