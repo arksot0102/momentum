@@ -21,8 +21,10 @@ function checkToDo(event) {
   const button = li.querySelector(":nth-child(2)");
   button.classList.toggle("checked");
   function hello(line) {
-    if (line.id == li.id) {
+    if (line.id == li.id && button.classList.contains("checked")) {
       line.checked = true;
+    } else if (line.id == li.id && !button.classList.contains("checked")) {
+      line.checked = false;
     }
   }
   toDos.forEach(hello);
@@ -60,6 +62,14 @@ function paintToDo(newTodo) {
   list.appendChild(check);
   list.appendChild(button);
   toDoList.appendChild(list);
+  check.classList.remove("checked");
+  if (newTodo.id == parseInt(list.id) && newTodo.checked == true) {
+    check.classList.add("checked");
+  } else {
+    check.classList.remove("checked");
+  }
+  //와 check 기능 저장 만드는데 진짜 오래걸렸네...
+  //잘 생각한듯
 }
 
 function handleToDoSubmit(event) {
