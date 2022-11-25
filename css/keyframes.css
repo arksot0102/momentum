@@ -42,7 +42,7 @@
   }
 
   100% {
-    transform: translateY(-40vh) translateX(40vw) scale(0.5);
+    transform: translateY(-40vh) translateX(50vw) translateX(-140px) scale(0.6);
   }
 }
 
