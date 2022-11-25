@@ -99,6 +99,8 @@ body {
   position: fixed;
   top: 10px;
   left: 10px;
+  font-size: 16px;
+  font-weight: 400;
 }
 #quote {
   position: fixed;
@@ -123,6 +125,9 @@ body {
   left: 10px;
   bottom: 10px;
 }
+#logout-btn {
+  font-size: 16px;
+}
 #clock {
   font-weight: 300;
 }
@@ -134,4 +139,23 @@ body {
 #todo-list {
   position: fixed;
   top: 0;
+}
+
+.weather {
+  color: aliceblue;
+  position: fixed;
+  top: 40px;
+  left: 10px;
+  padding-top: 6px;
+  font-size: 18px;
+  display: flex;
+  align-items: flex-start;
+  font-weight: 300;
+  border-top: solid 1px aliceblue;
+}
+.weather span {
+  margin-right: 10px;
+}
+.weather span:last-child {
+  font-size: 28px;
 }
